@@ -1,0 +1,1182 @@
+fileFormatVersion: 2
+guid: 940fcf6104146cf4da55304ad5bfada1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4204654334882406641
+    second: pngwing.com (39)_0
+  - first:
+      213: -123277144203232999
+    second: pngwing.com (39)_1
+  - first:
+      213: 7524147977884173101
+    second: pngwing.com (39)_2
+  - first:
+      213: -2432595602023997974
+    second: pngwing.com (39)_3
+  - first:
+      213: 5156285523661624701
+    second: pngwing.com (39)_4
+  - first:
+      213: 3146824126699345712
+    second: pngwing.com (39)_5
+  - first:
+      213: 3276039554618033194
+    second: pngwing.com (39)_6
+  - first:
+      213: -1187760139299874527
+    second: pngwing.com (39)_7
+  - first:
+      213: 5533247926089114353
+    second: pngwing.com (39)_8
+  - first:
+      213: -67159707053408061
+    second: pngwing.com (39)_9
+  - first:
+      213: -77464722997206521
+    second: pngwing.com (39)_10
+  - first:
+      213: 7549433000200209944
+    second: pngwing.com (39)_11
+  - first:
+      213: 1626954053373422548
+    second: pngwing.com (39)_12
+  - first:
+      213: 560134108124816966
+    second: pngwing.com (39)_13
+  - first:
+      213: 1515497411376922930
+    second: pngwing.com (39)_14
+  - first:
+      213: 9031165913449167207
+    second: pngwing.com (39)_15
+  - first:
+      213: 1199381615969369918
+    second: pngwing.com (39)_16
+  - first:
+      213: -8577395216862326092
+    second: pngwing.com (39)_17
+  - first:
+      213: -7739146730150257380
+    second: pngwing.com (39)_18
+  - first:
+      213: -4846351155435693397
+    second: pngwing.com (39)_19
+  - first:
+      213: 3269503668540925245
+    second: pngwing.com (39)_20
+  - first:
+      213: -8927532946845808052
+    second: pngwing.com (39)_21
+  - first:
+      213: -6893877093010583340
+    second: pngwing.com (39)_22
+  - first:
+      213: -1159939123322407763
+    second: pngwing.com (39)_23
+  - first:
+      213: -7603490819723337471
+    second: pngwing.com (39)_24
+  - first:
+      213: -7281077693574136543
+    second: pngwing.com (39)_25
+  - first:
+      213: 7171664291594573337
+    second: pngwing.com (39)_26
+  - first:
+      213: 4240871953589940739
+    second: pngwing.com (39)_27
+  - first:
+      213: -1631453844512222397
+    second: pngwing.com (39)_28
+  - first:
+      213: 7923021747258843097
+    second: pngwing.com (39)_29
+  - first:
+      213: 395951135744369313
+    second: pngwing.com (39)_30
+  - first:
+      213: -7112113979376037214
+    second: pngwing.com (39)_31
+  - first:
+      213: -8058156165791990917
+    second: pngwing.com (39)_32
+  - first:
+      213: 2052614321404323519
+    second: pngwing.com (39)_33
+  - first:
+      213: 1515410749871368718
+    second: pngwing.com (39)_34
+  - first:
+      213: 3424889637196196163
+    second: pngwing.com (39)_35
+  - first:
+      213: 3557498117889717830
+    second: pngwing.com (39)_36
+  - first:
+      213: -4609918078155752213
+    second: pngwing.com (39)_37
+  - first:
+      213: 8436149842169554529
+    second: pngwing.com (39)_38
+  - first:
+      213: -7080874896223672792
+    second: pngwing.com (39)_39
+  - first:
+      213: -8645277100027520493
+    second: pngwing.com (39)_40
+  - first:
+      213: -8309138995223698521
+    second: pngwing.com (39)_41
+  - first:
+      213: -8157593733464731515
+    second: pngwing.com (39)_42
+  - first:
+      213: 5267298299523443638
+    second: pngwing.com (39)_43
+  - first:
+      213: -9177693784959875488
+    second: pngwing.com (39)_44
+  - first:
+      213: -5674836106451125925
+    second: pngwing.com (39)_45
+  - first:
+      213: -7803915527658574098
+    second: pngwing.com (39)_46
+  - first:
+      213: -5137229584683885135
+    second: pngwing.com (39)_47
+  - first:
+      213: -3860199615470573799
+    second: pngwing.com (39)_48
+  - first:
+      213: -7965307940765647291
+    second: pngwing.com (39)_49
+  - first:
+      213: -8902870657981902621
+    second: pngwing.com (39)_50
+  - first:
+      213: 6885020429514211948
+    second: pngwing.com (39)_51
+  - first:
+      213: -4992300596493709542
+    second: pngwing.com (39)_52
+  - first:
+      213: 3252160841725599068
+    second: pngwing.com (39)_53
+  - first:
+      213: 9101732759816401690
+    second: pngwing.com (39)_54
+  - first:
+      213: 4725206833734109154
+    second: pngwing.com (39)_55
+  - first:
+      213: 5863903402315784051
+    second: pngwing.com (39)_56
+  - first:
+      213: -3531149758423874000
+    second: pngwing.com (39)_57
+  - first:
+      213: -9125163335493737886
+    second: pngwing.com (39)_58
+  - first:
+      213: -8202618059119163220
+    second: pngwing.com (39)_59
+  - first:
+      213: 4799594065176103284
+    second: pngwing.com (39)_60
+  - first:
+      213: -8639878004047613887
+    second: pngwing.com (39)_61
+  - first:
+      213: -2222777562958719337
+    second: pngwing.com (39)_62
+  - first:
+      213: -8405469083866354915
+    second: pngwing.com (39)_63
+  - first:
+      213: -267161448286526962
+    second: pngwing.com (39)_64
+  - first:
+      213: -265611874104395727
+    second: pngwing.com (39)_65
+  - first:
+      213: -3479713610745169592
+    second: pngwing.com (39)_66
+  - first:
+      213: 7971096688610230954
+    second: pngwing.com (39)_67
+  - first:
+      213: -5754856829311710638
+    second: pngwing.com (39)_68
+  - first:
+      213: 1275023938870180768
+    second: pngwing.com (39)_69
+  - first:
+      213: -1839645806431843693
+    second: pngwing.com (39)_70
+  - first:
+      213: 2752622651839436590
+    second: pngwing.com (39)_71
+  - first:
+      213: 8961953061252378552
+    second: pngwing.com (39)_72
+  - first:
+      213: -5708831756714530768
+    second: pngwing.com (39)_73
+  - first:
+      213: 5418272226108324885
+    second: pngwing.com (39)_74
+  - first:
+      213: -6108008288909002089
+    second: pngwing.com (39)_75
+  - first:
+      213: -4931001380439938538
+    second: pngwing.com (39)_76
+  - first:
+      213: 4346624825659987393
+    second: pngwing.com (39)_77
+  - first:
+      213: 736364234629892972
+    second: pngwing.com (39)_78
+  - first:
+      213: 7198489859828708220
+    second: pngwing.com (39)_79
+  - first:
+      213: -1070354502197177786
+    second: pngwing.com (39)_80
+  - first:
+      213: -6082047287446701116
+    second: pngwing.com (39)_81
+  - first:
+      213: -2827606655358791893
+    second: pngwing.com (39)_82
+  - first:
+      213: -8713554941205934564
+    second: pngwing.com (39)_83
+  - first:
+      213: -7032148023242111168
+    second: pngwing.com (39)_84
+  - first:
+      213: 5252324396091236040
+    second: pngwing.com (39)_85
+  - first:
+      213: -5504867569087926121
+    second: pngwing.com (39)_86
+  - first:
+      213: 6030528859838403336
+    second: pngwing.com (39)_87
+  - first:
+      213: 4154333048714507440
+    second: pngwing.com (39)_88
+  - first:
+      213: 7936479742934954598
+    second: pngwing.com (39)_89
+  - first:
+      213: 5562359260619340292
+    second: pngwing.com (39)_90
+  - first:
+      213: -1752709217229898861
+    second: pngwing.com (39)_91
+  - first:
+      213: 92382017273060901
+    second: pngwing.com (39)_92
+  - first:
+      213: -4283698732049589908
+    second: pngwing.com (39)_93
+  - first:
+      213: -3797819493653749433
+    second: pngwing.com (39)_94
+  - first:
+      213: 5715536302089016466
+    second: pngwing.com (39)_95
+  - first:
+      213: -6742093846226992933
+    second: pngwing.com (39)_96
+  - first:
+      213: -1719623194596552298
+    second: pngwing.com (39)_97
+  - first:
+      213: 8939907697469294634
+    second: pngwing.com (39)_98
+  - first:
+      213: -4849551370706493769
+    second: pngwing.com (39)_99
+  - first:
+      213: 7032302755162500442
+    second: pngwing.com (39)_100
+  - first:
+      213: 9186625544051273764
+    second: pngwing.com (39)_101
+  - first:
+      213: 4223634846127964152
+    second: pngwing.com (39)_102
+  - first:
+      213: -2174550527115469095
+    second: pngwing.com (39)_103
+  - first:
+      213: -3521909188483234290
+    second: pngwing.com (39)_104
+  - first:
+      213: 6615762703066281125
+    second: pngwing.com (39)_105
+  - first:
+      213: 7735902767298764707
+    second: pngwing.com (39)_106
+  - first:
+      213: -3828000857780487648
+    second: pngwing.com (39)_107
+  - first:
+      213: 2461098286081880772
+    second: pngwing.com (39)_108
+  - first:
+      213: 3919129731613394681
+    second: pngwing.com (39)_109
+  - first:
+      213: 1529528620978632025
+    second: pngwing.com (39)_110
+  - first:
+      213: 1299869493155401584
+    second: pngwing.com (39)_111
+  - first:
+      213: 5553327452520329790
+    second: pngwing.com (39)_112
+  - first:
+      213: -4945884734072091894
+    second: pngwing.com (39)_113
+  - first:
+      213: -5608124619162693437
+    second: pngwing.com (39)_114
+  - first:
+      213: -3474677795280562112
+    second: pngwing.com (39)_115
+  - first:
+      213: -5163046764505644655
+    second: pngwing.com (39)_116
+  - first:
+      213: 889141507211591974
+    second: pngwing.com (39)_117
+  - first:
+      213: 719120873032737516
+    second: pngwing.com (39)_118
+  - first:
+      213: 6538075519365628179
+    second: pngwing.com (39)_119
+  - first:
+      213: -4022324587801907499
+    second: pngwing.com (39)_120
+  - first:
+      213: 5313457153288549049
+    second: pngwing.com (39)_121
+  - first:
+      213: -8785033601972013817
+    second: pngwing.com (39)_122
+  - first:
+      213: 4559892046068476111
+    second: pngwing.com (39)_123
+  - first:
+      213: -7727225546033961258
+    second: pngwing.com (39)_124
+  - first:
+      213: 8335310899508364023
+    second: pngwing.com (39)_125
+  - first:
+      213: -2857866949965333027
+    second: pngwing.com (39)_126
+  - first:
+      213: -5179999784859262847
+    second: pngwing.com (39)_127
+  - first:
+      213: -2398215085195294700
+    second: pngwing.com (39)_128
+  - first:
+      213: -7523522122332443762
+    second: pngwing.com (39)_129
+  - first:
+      213: 7960777485219215363
+    second: pngwing.com (39)_130
+  - first:
+      213: 7105536859259956816
+    second: pngwing.com (39)_131
+  - first:
+      213: -8695195189327173088
+    second: pngwing.com (39)_132
+  - first:
+      213: -1035989200944170763
+    second: pngwing.com (39)_133
+  - first:
+      213: -4256451742807082892
+    second: pngwing.com (39)_134
+  - first:
+      213: -6248654746470586909
+    second: pngwing.com (39)_135
+  - first:
+      213: 4551168451243582205
+    second: pngwing.com (39)_136
+  - first:
+      213: -3468274021093209725
+    second: pngwing.com (39)_137
+  - first:
+      213: -8463988821300881267
+    second: pngwing.com (39)_138
+  - first:
+      213: 1321371850521070602
+    second: pngwing.com (39)_139
+  - first:
+      213: 3108161714935609149
+    second: pngwing.com (39)_140
+  - first:
+      213: -2277868612637770021
+    second: pngwing.com (39)_141
+  - first:
+      213: -8271147083052593792
+    second: pngwing.com (39)_142
+  - first:
+      213: 7599631167491931716
+    second: pngwing.com (39)_143
+  - first:
+      213: 2782848609331324445
+    second: pngwing.com (39)_144
+  - first:
+      213: -2787398795182093670
+    second: pngwing.com (39)_145
+  - first:
+      213: 4401974544202435716
+    second: pngwing.com (39)_146
+  - first:
+      213: 3833833648818408851
+    second: pngwing.com (39)_147
+  - first:
+      213: 7981143165362224311
+    second: pngwing.com (39)_148
+  - first:
+      213: -6893854292544385912
+    second: pngwing.com (39)_149
+  - first:
+      213: -8329402807628160882
+    second: pngwing.com (39)_150
+  - first:
+      213: -5985154784909460812
+    second: pngwing.com (39)_151
+  - first:
+      213: -2505306870488963649
+    second: pngwing.com (39)_152
+  - first:
+      213: -8596791886963176393
+    second: pngwing.com (39)_153
+  - first:
+      213: -813205154651689216
+    second: pngwing.com (39)_154
+  - first:
+      213: 3947858771655428926
+    second: pngwing.com (39)_155
+  - first:
+      213: 5250119921464514531
+    second: pngwing.com (39)_156
+  - first:
+      213: -5457249278424273782
+    second: pngwing.com (39)_157
+  - first:
+      213: -4862212245593657339
+    second: pngwing.com (39)_158
+  - first:
+      213: 2391616953727581662
+    second: pngwing.com (39)_159
+  - first:
+      213: 6053177420983171042
+    second: pngwing.com (39)_160
+  - first:
+      213: -3920100671830648743
+    second: pngwing.com (39)_161
+  - first:
+      213: -3925019781328666780
+    second: pngwing.com (39)_162
+  - first:
+      213: 7688611671230967714
+    second: pngwing.com (39)_163
+  - first:
+      213: 8018473512287532878
+    second: pngwing.com (39)_164
+  - first:
+      213: -2909837622580690081
+    second: pngwing.com (39)_165
+  - first:
+      213: -4704400507337975641
+    second: pngwing.com (39)_166
+  - first:
+      213: -3630509398869380821
+    second: pngwing.com (39)_167
+  - first:
+      213: 7666134764520110375
+    second: pngwing.com (39)_168
+  - first:
+      213: 2732415537802212318
+    second: pngwing.com (39)_169
+  - first:
+      213: 3064375449563906640
+    second: pngwing.com (39)_170
+  - first:
+      213: -1096142779077233140
+    second: pngwing.com (39)_171
+  - first:
+      213: 7713431267370258207
+    second: pngwing.com (39)_172
+  - first:
+      213: -6940593755931608975
+    second: pngwing.com (39)_173
+  - first:
+      213: -1562101280327299172
+    second: pngwing.com (39)_174
+  - first:
+      213: 2367537268019721130
+    second: pngwing.com (39)_175
+  - first:
+      213: 7452847175302005034
+    second: pngwing.com (39)_176
+  - first:
+      213: 2980659292928742336
+    second: pngwing.com (39)_177
+  - first:
+      213: 8259682927401160954
+    second: pngwing.com (39)_178
+  - first:
+      213: 6587723963975322361
+    second: pngwing.com (39)_179
+  - first:
+      213: 5299615329478528213
+    second: pngwing.com (39)_180
+  - first:
+      213: 6727177976049365122
+    second: pngwing.com (39)_181
+  - first:
+      213: 7259038400558388520
+    second: pngwing.com (39)_182
+  - first:
+      213: 3682154380474444243
+    second: pngwing.com (39)_183
+  - first:
+      213: 2833721921719713072
+    second: pngwing.com (39)_184
+  - first:
+      213: 5080530844066987235
+    second: pngwing.com (39)_185
+  - first:
+      213: -5714284470108384040
+    second: pngwing.com (39)_186
+  - first:
+      213: 8557391211232187048
+    second: pngwing.com (39)_187
+  - first:
+      213: 1848429496644644275
+    second: pngwing.com (39)_188
+  - first:
+      213: 6963541864193506719
+    second: pngwing.com (39)_189
+  - first:
+      213: -9028290881830587013
+    second: pngwing.com (39)_190
+  - first:
+      213: -2456389041934054020
+    second: pngwing.com (39)_191
+  - first:
+      213: 6554589917371382389
+    second: pngwing.com (39)_192
+  - first:
+      213: 7911168372745574999
+    second: pngwing.com (39)_193
+  - first:
+      213: -3626580422067689085
+    second: pngwing.com (39)_194
+  - first:
+      213: -1067631509395050250
+    second: pngwing.com (39)_195
+  - first:
+      213: 6083086646866658705
+    second: pngwing.com (39)_196
+  - first:
+      213: -7162586645626940809
+    second: pngwing.com (39)_197
+  - first:
+      213: -1064623824395073445
+    second: pngwing.com (39)_198
+  - first:
+      213: 1166778496304516759
+    second: pngwing.com (39)_199
+  - first:
+      213: -8129101638396652107
+    second: pngwing.com (39)_200
+  - first:
+      213: -2158978872634968186
+    second: pngwing.com (39)_201
+  - first:
+      213: 4302802377923656571
+    second: pngwing.com (39)_202
+  - first:
+      213: -8511241868833263510
+    second: pngwing.com (39)_203
+  - first:
+      213: -4325175312618734018
+    second: pngwing.com (39)_204
+  - first:
+      213: -712911230920180371
+    second: pngwing.com (39)_205
+  - first:
+      213: -5311993420799974631
+    second: pngwing.com (39)_206
+  - first:
+      213: -4599089268936087515
+    second: pngwing.com (39)_207
+  - first:
+      213: -8661429804499200153
+    second: pngwing.com (39)_208
+  - first:
+      213: 656404344778414123
+    second: pngwing.com (39)_209
+  - first:
+      213: -1924956972353194502
+    second: pngwing.com (39)_210
+  - first:
+      213: -5147414442076370089
+    second: pngwing.com (39)_211
+  - first:
+      213: 8098147656341059274
+    second: pngwing.com (39)_212
+  - first:
+      213: 2331558154715144908
+    second: pngwing.com (39)_213
+  - first:
+      213: 8743675478536332236
+    second: pngwing.com (39)_214
+  - first:
+      213: -8022098649599082021
+    second: pngwing.com (39)_215
+  - first:
+      213: 177243792049396353
+    second: pngwing.com (39)_216
+  - first:
+      213: -3121793746276517490
+    second: pngwing.com (39)_217
+  - first:
+      213: -1444548833062715535
+    second: pngwing.com (39)_218
+  - first:
+      213: 7950911030230837951
+    second: pngwing.com (39)_219
+  - first:
+      213: 9207646366689537341
+    second: pngwing.com (39)_220
+  - first:
+      213: -9016039115145509156
+    second: pngwing.com (39)_221
+  - first:
+      213: -6742752165758526845
+    second: pngwing.com (39)_222
+  - first:
+      213: -3809650297845584320
+    second: pngwing.com (39)_223
+  - first:
+      213: -8163769380603674905
+    second: pngwing.com (39)_224
+  - first:
+      213: 1594941639602667463
+    second: pngwing.com (39)_225
+  - first:
+      213: -7682616210987741254
+    second: pngwing.com (39)_226
+  - first:
+      213: 8048348374405007388
+    second: pngwing.com (39)_227
+  - first:
+      213: -6866414072295215028
+    second: pngwing.com (39)_228
+  - first:
+      213: 3392472030354256432
+    second: pngwing.com (39)_229
+  - first:
+      213: -7511954162490396205
+    second: pngwing.com (39)_230
+  - first:
+      213: 4150505351602510548
+    second: pngwing.com (39)_231
+  - first:
+      213: 7338631403881871568
+    second: pngwing.com (39)_232
+  - first:
+      213: 2497995629251158745
+    second: pngwing.com (39)_233
+  - first:
+      213: 7488367298391101360
+    second: pngwing.com (39)_234
+  - first:
+      213: -7780458488896840736
+    second: pngwing.com (39)_235
+  - first:
+      213: -4948246240650391405
+    second: pngwing.com (39)_236
+  - first:
+      213: -1471947513807841638
+    second: pngwing.com (39)_237
+  - first:
+      213: -4583872601187898263
+    second: pngwing.com (39)_238
+  - first:
+      213: -3988215105463836090
+    second: pngwing.com (39)_239
+  - first:
+      213: 1943714820475482182
+    second: pngwing.com (39)_240
+  - first:
+      213: 964263617159159432
+    second: pngwing.com (39)_241
+  - first:
+      213: 181591204564364743
+    second: pngwing.com (39)_242
+  - first:
+      213: 3174769283929702047
+    second: pngwing.com (39)_243
+  - first:
+      213: -6915442999906488745
+    second: pngwing.com (39)_244
+  - first:
+      213: 8721062354812846309
+    second: pngwing.com (39)_245
+  - first:
+      213: 6134446476829784170
+    second: pngwing.com (39)_246
+  - first:
+      213: 1514828854628444032
+    second: pngwing.com (39)_247
+  - first:
+      213: -2368571178453320468
+    second: pngwing.com (39)_248
+  - first:
+      213: 5918812670260903095
+    second: pngwing.com (39)_249
+  - first:
+      213: 879696962014718175
+    second: pngwing.com (39)_250
+  - first:
+      213: 1452023045033767558
+    second: pngwing.com (39)_251
+  - first:
+      213: -1384306480024260260
+    second: pngwing.com (39)_252
+  - first:
+      213: -3923438458249534684
+    second: pngwing.com (39)_253
+  - first:
+      213: 2884300245150912257
+    second: pngwing.com (39)_254
+  - first:
+      213: 2423677929070066026
+    second: pngwing.com (39)_255
+  - first:
+      213: 1990370952908062492
+    second: pngwing.com (39)_256
+  - first:
+      213: -1447863655057734929
+    second: pngwing.com (39)_257
+  - first:
+      213: -8122105614366599275
+    second: pngwing.com (39)_258
+  - first:
+      213: -4850463575747254452
+    second: pngwing.com (39)_259
+  - first:
+      213: -4446044474185698625
+    second: pngwing.com (39)_260
+  - first:
+      213: -7693616252669937230
+    second: pngwing.com (39)_261
+  - first:
+      213: -3173346657432037378
+    second: pngwing.com (39)_262
+  - first:
+      213: 174037306775667000
+    second: pngwing.com (39)_263
+  - first:
+      213: -3710202558490459454
+    second: pngwing.com (39)_264
+  - first:
+      213: -153051985150290027
+    second: pngwing.com (39)_265
+  - first:
+      213: -2237508410458998618
+    second: pngwing.com (39)_266
+  - first:
+      213: -2655137198937602026
+    second: pngwing.com (39)_267
+  - first:
+      213: -6160562735644601894
+    second: pngwing.com (39)_268
+  - first:
+      213: 7758550346150661299
+    second: pngwing.com (39)_269
+  - first:
+      213: -6559388150559089006
+    second: pngwing.com (39)_270
+  - first:
+      213: -6898036181011727860
+    second: pngwing.com (39)_271
+  - first:
+      213: 3882489404859921142
+    second: pngwing.com (39)_272
+  - first:
+      213: -1547196563617096985
+    second: pngwing.com (39)_273
+  - first:
+      213: 5415618389848934009
+    second: pngwing.com (39)_274
+  - first:
+      213: -2366154470440222697
+    second: pngwing.com (39)_275
+  - first:
+      213: -4336405439844418658
+    second: pngwing.com (39)_276
+  - first:
+      213: -6818122070349927616
+    second: pngwing.com (39)_277
+  - first:
+      213: -4196890333551673345
+    second: pngwing.com (39)_278
+  - first:
+      213: -9117577085547180883
+    second: pngwing.com (39)_279
+  - first:
+      213: 6820565899261920954
+    second: pngwing.com (39)_280
+  - first:
+      213: -1293673520263100218
+    second: pngwing.com (39)_281
+  - first:
+      213: 4382643455834857031
+    second: pngwing.com (39)_282
+  - first:
+      213: 8489711194859441393
+    second: pngwing.com (39)_283
+  - first:
+      213: -3352906276595518682
+    second: pngwing.com (39)_284
+  - first:
+      213: 7199791522313243454
+    second: pngwing.com (39)_285
+  - first:
+      213: -6722699478059252698
+    second: pngwing.com (39)_286
+  - first:
+      213: 5246974448100484703
+    second: pngwing.com (39)_287
+  - first:
+      213: -4753479440459075237
+    second: pngwing.com (39)_288
+  - first:
+      213: -2465979011959801918
+    second: pngwing.com (39)_289
+  - first:
+      213: -5455612715177948837
+    second: pngwing.com (39)_290
+  - first:
+      213: 2797706375873317648
+    second: pngwing.com (39)_291
+  - first:
+      213: -2088870356697190112
+    second: pngwing.com (39)_292
+  - first:
+      213: -2994017465890545553
+    second: pngwing.com (39)_293
+  - first:
+      213: 2648420285010395329
+    second: pngwing.com (39)_294
+  - first:
+      213: -2220117990424466194
+    second: pngwing.com (39)_295
+  - first:
+      213: -4138046545977840983
+    second: pngwing.com (39)_296
+  - first:
+      213: -8633266297700375126
+    second: pngwing.com (39)_297
+  - first:
+      213: -5705790091368748374
+    second: pngwing.com (39)_298
+  - first:
+      213: -5942557545040619486
+    second: pngwing.com (39)_299
+  - first:
+      213: -2536872976966683905
+    second: pngwing.com (39)_300
+  - first:
+      213: 1799158648818401899
+    second: pngwing.com (39)_301
+  - first:
+      213: 3762276904778225072
+    second: pngwing.com (39)_302
+  - first:
+      213: -474639956790427291
+    second: pngwing.com (39)_303
+  - first:
+      213: -6242752631069185004
+    second: pngwing.com (39)_304
+  - first:
+      213: 1764463685368146788
+    second: pngwing.com (39)_305
+  - first:
+      213: 3322725785096547311
+    second: pngwing.com (39)_306
+  - first:
+      213: -7145399212881627431
+    second: pngwing.com (39)_307
+  - first:
+      213: 9169520076779222044
+    second: pngwing.com (39)_308
+  - first:
+      213: 3127684850403493338
+    second: pngwing.com (39)_309
+  - first:
+      213: 7354940737069241855
+    second: pngwing.com (39)_310
+  - first:
+      213: 6488745355747591763
+    second: pngwing.com (39)_311
+  - first:
+      213: -3177007834405758474
+    second: pngwing.com (39)_312
+  - first:
+      213: 7215072958896397896
+    second: pngwing.com (39)_313
+  - first:
+      213: 3856837196337830786
+    second: pngwing.com (39)_314
+  - first:
+      213: 7852460884259336466
+    second: pngwing.com (39)_315
+  - first:
+      213: -5652853522616116475
+    second: pngwing.com (39)_316
+  - first:
+      213: 4745884151419081499
+    second: pngwing.com (39)_317
+  - first:
+      213: 2920170615672700904
+    second: pngwing.com (39)_318
+  - first:
+      213: -3393314812373557838
+    second: pngwing.com (39)_319
+  - first:
+      213: 7200496607846958181
+    second: pngwing.com (39)_320
+  - first:
+      213: 6632176589332878947
+    second: pngwing.com (39)_321
+  - first:
+      213: -7155744166869837818
+    second: pngwing.com (39)_322
+  - first:
+      213: -2057744367721118367
+    second: pngwing.com (39)_323
+  - first:
+      213: -2393979764390930424
+    second: pngwing.com (39)_324
+  - first:
+      213: -4308394755446279475
+    second: pngwing.com (39)_325
+  - first:
+      213: 5171938652709817294
+    second: pngwing.com (39)_326
+  - first:
+      213: -5066914193036678712
+    second: pngwing.com (39)_327
+  - first:
+      213: -8697240846596239677
+    second: pngwing.com (39)_328
+  - first:
+      213: -6654583517143493135
+    second: pngwing.com (39)_329
+  - first:
+      213: -895349857894043356
+    second: pngwing.com (39)_330
+  - first:
+      213: 7985103459240422520
+    second: pngwing.com (39)_331
+  - first:
+      213: -4121020391599036085
+    second: pngwing.com (39)_332
+  - first:
+      213: 922652337543607218
+    second: pngwing.com (39)_333
+  - first:
+      213: 8848608421090125051
+    second: pngwing.com (39)_334
+  - first:
+      213: 6519168318667484573
+    second: pngwing.com (39)_335
+  - first:
+      213: 4836993240563256825
+    second: pngwing.com (39)_336
+  - first:
+      213: -5062666125569050367
+    second: pngwing.com (39)_337
+  - first:
+      213: -4343612406159056794
+    second: pngwing.com (39)_338
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngwing.com (39)_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 35
+        width: 1471
+        height: 1083
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f170ed82116a5c0800000000000000
+      internalID: -4204654334882406641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

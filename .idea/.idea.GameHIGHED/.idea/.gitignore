@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/.idea.GameHIGHED.iml
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+# Datasource local storage ignored files
+/../../../../../../../:\PC\Documents\GameHIGHED\.idea\.idea.GameHIGHED\.idea/dataSources/
+/dataSources.local.xml
