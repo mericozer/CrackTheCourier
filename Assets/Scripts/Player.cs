@@ -8,20 +8,22 @@ public class Player : MonoBehaviour
 {
 
     public int water;
-    public int bottleCounter = 0;
+    private int maxBottle;
     
-    public Image[] bottles;
+    public Image[] bottles; //UI Bottles
+    
     public Sprite fullBottle;
     public Sprite emptyBottle;
 
     public GameObject projectile;
+    
     public Transform shotPoint;
 
-    public List<GameObject> bottleSprites = new List<GameObject>();
+    public List<GameObject> bottleSprites = new List<GameObject>(); //On Player Bottles
     // Start is called before the first frame update
     void Start()
     {
-        
+        maxBottle = water;
     }
 
     // Update is called once per frame
@@ -29,11 +31,11 @@ public class Player : MonoBehaviour
     {
         
     }
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage()
     {
-        water -= damageAmount;
+        water -= 1;
         Instantiate(projectile, shotPoint.position, transform.rotation);
-        UpdateWaterUI(water);
+        UpdateWaterUI(false);
         CloseBottleSprites();
         
         if (water <= 0)
@@ -42,25 +44,41 @@ public class Player : MonoBehaviour
             CanvasController.Instance.ShowPanels("Lose");
         }
     }
-    void UpdateWaterUI(int currentHealth)
+    
+    public void CollectBottle()
     {
-        for (int i = 0; i < bottles.Length; i++)
+        if (water < maxBottle)
         {
-            if (i < currentHealth)
-            {
-                bottles[i].sprite = fullBottle;
-            }
-            else
-            {
-                bottles[i].sprite = emptyBottle;
-            }
+            UpdateWaterUI(true);
+            OpenBottleSprite();
+            water += 1;
         }
+    }
+    
+    void UpdateWaterUI(bool increase)
+    {
+
+        if (increase)
+        {
+            bottles[water].sprite = fullBottle;
+        }
+        else
+        {
+            bottles[water].sprite = emptyBottle;
+        }
+    
+    }
+    
+    void OpenBottleSprite()
+    {
+        bottleSprites[water].SetActive(true);
     }
 
     void CloseBottleSprites()
     {
-        bottleSprites[bottleCounter].SetActive(false);
-        bottleCounter++;
+        bottleSprites[water].SetActive(false);
     }
+
+   
 
 }

@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/modules.xml
+/.idea.CrackTheCourier.iml
+# Datasource local storage ignored files
+/../../../../../../../:\PC\Documents\CrackTheCourier\.idea\.idea.CrackTheCourier\.idea/dataSources/
+/dataSources.local.xml

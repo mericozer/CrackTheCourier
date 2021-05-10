@@ -153,16 +153,22 @@ public class PlayerMovement : MonoBehaviour
 			StartCoroutine(Jump());
 			isJumping = true;
 			CanvasController.Instance.UpdateYolometer(20f);
-			Debug.Log("bumped");
+			//Debug.Log("bumped");
 		}
 		
 		if (col.CompareTag("Crack"))
 		{
-			player.TakeDamage(1);
+			player.TakeDamage();
 			CanvasController.Instance.UpdateYolometer(30f);
-			Debug.Log("jumped");
+			//Debug.Log("jumped");
 		}
-		
+
+		if (col.CompareTag("Damacana"))
+		{
+			player.CollectBottle();
+			Destroy(col.gameObject);
+		}
+
 	}
 	
 	void OnTriggerExit2D(Collider2D other)
@@ -203,7 +209,7 @@ public class PlayerMovement : MonoBehaviour
 		
 		while (transform.position.y < maxHeight)
 		{
-			Debug.Log("jumpingggg");
+			//Debug.Log("jumpingggg");
 			transform.position += test * Time.deltaTime * 8f;
 			//transform.position += transform.right * Time.deltaTime * 3f;
 			yield return null;
@@ -211,9 +217,9 @@ public class PlayerMovement : MonoBehaviour
 
 		while (transform.position.y > originalHeight + 3.3f) 
 		{
-			Debug.Log("fallinggg");
-			Debug.Log("y: " + transform.position.y);
-			Debug.Log("o: " + originalHeight);
+			//Debug.Log("fallinggg");
+			//Debug.Log("y: " + transform.position.y);
+			//Debug.Log("o: " + originalHeight);
 			transform.position -= test2 * Time.deltaTime * 8f;
 			yield return null;
 		}
