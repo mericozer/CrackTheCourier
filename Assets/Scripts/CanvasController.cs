@@ -27,6 +27,7 @@ public class CanvasController : MonoBehaviour
 
     private bool isGameRunning = true;
     private bool panelOpen = false;
+    [SerializeField]  private bool isYolometerActive = true;
 
     private int yoloColorValue = 0;
         //Singleton
@@ -81,7 +82,10 @@ public class CanvasController : MonoBehaviour
             }
             else
             {
-                UpdateYolometer(-0.1f);
+                if (isYolometerActive)
+                {
+                    UpdateYolometer(-0.1f);
+                }
                 //yolo += -0.1f;
                 //yoloMeter.value = yolo;
             }
