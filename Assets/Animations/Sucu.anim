@@ -2877,7 +2877,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SucuArkaTeker
+    path: SucuBacak/SucuGovde
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2887,7 +2887,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SucuArkaTeker
+    path: SucuBacak/SucuGovde
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2897,7 +2897,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SucuArkaTeker
+    path: SucuBacak/SucuGovde
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2937,7 +2937,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SucuBacak/SucuGovde
+    path: SucuArkaTeker
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2947,7 +2947,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SucuBacak/SucuGovde
+    path: SucuArkaTeker
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2957,7 +2957,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SucuBacak/SucuGovde
+    path: SucuArkaTeker
     classID: 4
     script: {fileID: 0}
   - curve:
