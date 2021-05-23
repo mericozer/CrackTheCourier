@@ -28,12 +28,26 @@ public class PlayerMovement : MonoBehaviour
 	private Vector2 normalFirst = new Vector2(0.168f, 0.1f);
 	private Vector2 normalSecond = new Vector2(0.15f, 0.1f);
 
+	//mew movement tyrout
+	private Vector3 newPos;
+	private Vector3 startPos;
+	private float journeyLength;
+	[SerializeField] private float speedNew = 10f;
+	private float startTime;
+	private bool isMoving = false;
+	private bool rightTurn = false;
+	private bool leftTurn = false;
+	private Vector3 target;
+
+	private Animator anim;
+	
 	public float speed;
 	private Rigidbody2D rb;
 	void Start ()
 	{
 		//rb = GetComponent<Rigidbody2D>();
 		player = GetComponent<Player>();
+		anim = GetComponent<Animator>();
 
 		normalMove = normalFirst;
 	}
@@ -41,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 	
     void Update ()
     {
-	    if (!isJumping)
+	    if (!isJumping && !isMoving)
 	    {
 		    Vector2 moveInput;
 		    //Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -50,44 +64,79 @@ public class PlayerMovement : MonoBehaviour
 		
 		    if(Input.GetKeyDown(KeyCode.A) && toLeft > 0)
 		    {
-			    transform.Translate(new Vector3(-2f,1.5f));
-			    //moveInput = new Vector2(-1, 1);
+			    //original movement:
+			   // transform.Translate(new Vector3(-2f,1.5f));
+			    
+			  
+			   
+			   anim.Play("LeftTurn");
+			    
 			    toLeft--;
 			    toRight++;
-			    //moveAmount = moveInput.normalized * speed;
+			    
 		    }
 		    if(Input.GetKeyDown(KeyCode.D) && toRight > 0)
 		    {
-			    transform.Translate(new Vector3(2f,-1.5f));
+			    //original movement:
+			    //transform.Translate(new Vector3(2f,-1.5f));
+			    
+			   
+			    
+			    anim.Play("RightTurn");
+			    
+			    
 			    toRight--;
 			    toLeft++;
 			    //moveAmount = moveInput.normalized * speed;
 		    }
+		   
+	    }
+	    if (isMoving)
+	    {
+		    float step = speedNew * Time.deltaTime;
+		    transform.position = Vector2.MoveTowards(transform.position, target, step);
+		    Debug.Log("POS X: " + target.x);
+		    Debug.Log("POS Y: " + target.y);
+		    Debug.Log("POS z: " + target.z);
+		   
+		    if (rightTurn && transform.position.x >= target.x && transform.position.y <= target.y)
+		    {
+			    Debug.Log("IM HERE");
+			    isMoving = false;
+			    rightTurn = false;
+
+		    }
+		    else if (leftTurn && transform.position.x >= target.x && transform.position.y >= target.y)
+		    {
+			    isMoving = false;
+			    leftTurn = false;
+		    }
+				   
 	    }
 	    
-		 
-	}
-	private void FixedUpdate()
+    }
+
+    private void TurnLeft()
+    {
+	    target = new Vector3(transform.position.x + -2f, transform.position.y + 1.5f, transform.position.z + 0);
+	    target += ForwardMag(normalMove);
+	    isMoving = true;
+	    leftTurn = true;
+    }
+    
+    private void TurnRight()
+    {
+	    target = new Vector3(transform.position.x + 2f, transform.position.y + -1.5f, transform.position.z + 0);
+	    target += ForwardMag(normalMove);
+	    isMoving = true;
+	    rightTurn = true;
+	    
+    }
+
+    private void FixedUpdate()
 	{
-		/*if (timerRoad <= 0)
-		{
-			timerRoad -= Time.fixedDeltaTime;
-			
-			if (firstRoad)
-			{
-				normalMove = normalSecond;
-				firstRoad = false;
-				timerRoad = 3f;
-			}
-			else
-			{
-				normalMove = normalFirst;
-				firstRoad = true;
-				timerRoad = 2f;
-			}
-		}*/
 		
-		if (!isFinish &&!isJumping && !isDead )
+		if (!isFinish &&!isJumping && !isDead && !isMoving)
 		{
 			Move(normalMove);
 		}
@@ -96,7 +145,6 @@ public class PlayerMovement : MonoBehaviour
 			
 			if (speed >= 0.1f)
 			{
-				
 				speed -= 1f;
 				Move(normalMove);
 			}
@@ -107,6 +155,8 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 	}
+
+	
 	
 	void OnCollisionEnter2D(Collision2D collision)
     {
@@ -192,7 +242,16 @@ public class PlayerMovement : MonoBehaviour
 		//Vector2 newPos = currentPos + movement * Time.deltaTime;	
 		
 		//Debug.Log(newPos);
-		transform.Translate(movement * Time.deltaTime, Space.World);
+		transform.Translate(movement * Time.fixedDeltaTime, Space.World);
+	}
+
+	private Vector3 ForwardMag(Vector2 moveVec)
+	{
+		Vector2 inputVector = moveVec;
+		inputVector = Vector2.ClampMagnitude(inputVector, 1);
+		Vector2 movement = inputVector * 10f;
+
+		return movement;
 	}
 
 	
