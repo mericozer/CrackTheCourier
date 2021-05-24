@@ -95,9 +95,9 @@ public class PlayerMovement : MonoBehaviour
 	    {
 		    float step = speedNew * Time.deltaTime;
 		    transform.position = Vector2.MoveTowards(transform.position, target, step);
-		    Debug.Log("POS X: " + target.x);
+		    /*Debug.Log("POS X: " + target.x);
 		    Debug.Log("POS Y: " + target.y);
-		    Debug.Log("POS z: " + target.z);
+		    Debug.Log("POS z: " + target.z);*/
 		   
 		    if (rightTurn && transform.position.x >= target.x && transform.position.y <= target.y)
 		    {

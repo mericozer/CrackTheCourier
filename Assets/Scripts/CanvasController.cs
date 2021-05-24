@@ -13,6 +13,7 @@ public class CanvasController : MonoBehaviour
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject lowYoloPanel;
     [SerializeField] private GameObject filler;
+    [SerializeField] private  GameObject YoloShout;
     
     [SerializeField] private Slider yoloMeter;
 
@@ -22,11 +23,14 @@ public class CanvasController : MonoBehaviour
     
     private float loseYoloTime = 2f;
     private float cooldownTimer = 0f;
+    private float shoutTimer = 2f;
     private float maxYOLO = 100f;
     private float currentYolo;
 
     private bool isGameRunning = true;
     private bool panelOpen = false;
+    private bool shout = true;
+    private bool onWait = false;
     [SerializeField]  private bool isYolometerActive = true;
 
     private int yoloColorValue = 0;
@@ -82,6 +86,11 @@ public class CanvasController : MonoBehaviour
             }
             else
             {
+                if (cooldownTimer <= 0)
+                {
+                    onWait = false;
+                }
+
                 if (isYolometerActive)
                 {
                     UpdateYolometer(-0.1f);
@@ -104,7 +113,35 @@ public class CanvasController : MonoBehaviour
         
         if (yoloValue > 0)
         {
-            cooldownTimer = 1.5f;
+            if (!onWait)
+            {
+                onWait = true;
+                cooldownTimer = 1.5f;
+            }
+            else
+            {
+                cooldownTimer += 0.3f;
+            }
+           
+        }
+
+        if (yoloMeter.value < 100f)
+        {
+            shout = true;
+            shoutTimer = 3f;
+        }
+
+        if (yoloMeter.value.Equals(100f))
+        {
+            
+            //shoutTimer += Time.deltaTime;
+            if (!YoloShout.activeSelf && shout)
+            {
+                shout = false;
+                YoloShout.SetActive(true);
+            }
+            
+            
         }
 
         if (currentYolo <= 0)
@@ -204,5 +241,6 @@ public class CanvasController : MonoBehaviour
         
     }
     
+
 
 }
