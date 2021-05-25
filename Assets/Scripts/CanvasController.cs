@@ -82,17 +82,20 @@ public class CanvasController : MonoBehaviour
             }
             else if (cooldownTimer > 0)
             {
+                Debug.Log("countdown");
                 cooldownTimer -= Time.deltaTime;
             }
             else
             {
                 if (cooldownTimer <= 0)
                 {
+                    Debug.Log("countdown fin");
                     onWait = false;
                 }
 
                 if (isYolometerActive)
                 {
+                    Debug.Log("yolo work");
                     UpdateYolometer(-0.1f);
                 }
                 //yolo += -0.1f;
@@ -111,6 +114,7 @@ public class CanvasController : MonoBehaviour
 
         YoloColorValueChecker();
         
+        Debug.Log("cdt is: " + cooldownTimer);
         if (yoloValue > 0)
         {
             if (!onWait)

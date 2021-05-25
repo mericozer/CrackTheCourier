@@ -770,7 +770,6 @@ GameObject:
   - component: {fileID: 1386263705103730614}
   - component: {fileID: 1386263705103730608}
   - component: {fileID: 1386263705103730602}
-  - component: {fileID: 1386263705103730613}
   - component: {fileID: 1386263705103730612}
   - component: {fileID: 1386263705103730615}
   m_Layer: 31
@@ -909,24 +908,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &1386263705103730613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1386263705103730611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51e028e1c52376b4a91b401e9e2cbacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  smoke: {fileID: 1386263705014056939}
-  timerRoad: 2
-  firstRoad: 1
-  speedNew: 30
-  speed: 50
 --- !u!50 &1386263705103730612
 Rigidbody2D:
   serializedVersion: 4
