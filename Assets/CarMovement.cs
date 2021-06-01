@@ -37,4 +37,14 @@ public class CarMovement : MonoBehaviour
         //Debug.Log(newPos);
         transform.Translate(movement * Time.deltaTime, Space.World);
     }
+
+   
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("TestBlock"))
+        {
+            Destroy(gameObject);
+        }
+    }
+  
 }

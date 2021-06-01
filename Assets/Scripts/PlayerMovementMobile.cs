@@ -39,6 +39,8 @@ public class PlayerMovementMobile : MonoBehaviour
 	private bool leftTurn = false;
 	private Vector3 target;
 
+	[SerializeField] private bool onTheMove;
+	
 	private Animator anim;
 	
 	public float speed;
@@ -70,6 +72,8 @@ public class PlayerMovementMobile : MonoBehaviour
 			  
 			   
 			   anim.Play("LeftTurn");
+			   StartCoroutine(RivalController.instance.DelayedLeft());
+			   
 			    
 			    toLeft--;
 			    toRight++;
@@ -83,6 +87,7 @@ public class PlayerMovementMobile : MonoBehaviour
 			   
 			    
 			    anim.Play("RightTurn");
+			   StartCoroutine(RivalController.instance.DelayedRight());
 			    
 			    
 			    toRight--;
@@ -119,7 +124,12 @@ public class PlayerMovementMobile : MonoBehaviour
     private void TurnLeft()
     {
 	    target = new Vector3(transform.position.x + -2f, transform.position.y + 1.5f, transform.position.z + 0);
-	    target += ForwardMag(normalMove);
+
+	    if (onTheMove)
+	    {
+		    target += ForwardMag(normalMove);
+	    }
+	    
 	    isMoving = true;
 	    leftTurn = true;
     }
@@ -127,7 +137,12 @@ public class PlayerMovementMobile : MonoBehaviour
     private void TurnRight()
     {
 	    target = new Vector3(transform.position.x + 2f, transform.position.y + -1.5f, transform.position.z + 0);
-	    target += ForwardMag(normalMove);
+	    
+	    if (onTheMove)
+	    {
+		    target += ForwardMag(normalMove);
+	    }
+	   
 	    isMoving = true;
 	    rightTurn = true;
 	    
@@ -135,24 +150,27 @@ public class PlayerMovementMobile : MonoBehaviour
 
     private void FixedUpdate()
 	{
-		
-		if (!isFinish &&!isJumping && !isDead && !isMoving)
+		if (onTheMove)
 		{
-			Move(normalMove);
-		}
-		else if(isFinish || isDead)
-		{
-			
-			if (speed >= 0.1f)
+			if (!isFinish &&!isJumping && !isDead && !isMoving)
 			{
-				speed -= 1f;
 				Move(normalMove);
 			}
-			else
+			else if(isFinish || isDead)
 			{
-				normalMove = Vector2.zero;
+			
+				if (speed >= 0.1f)
+				{
+					speed -= 1f;
+					Move(normalMove);
+				}
+				else
+				{
+					normalMove = Vector2.zero;
+				}
 			}
 		}
+		
 
 	}
 
@@ -204,6 +222,12 @@ public class PlayerMovementMobile : MonoBehaviour
 			isJumping = true;
 			CanvasController.Instance.UpdateYolometer(20f);
 			//Debug.Log("bumped");
+		}
+		
+		if (col.CompareTag("Star"))
+		{
+			player.TakeDamage();
+			Destroy(col.gameObject);
 		}
 		
 		if (col.CompareTag("Crack"))

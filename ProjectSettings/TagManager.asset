@@ -11,6 +11,8 @@ TagManager:
   - Pit
   - Cow
   - Damacana
+  - TestBlock
+  - Star
   layers:
   - Default
   - TransparentFX

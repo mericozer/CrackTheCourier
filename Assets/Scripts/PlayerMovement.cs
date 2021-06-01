@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 	private bool rightTurn = false;
 	private bool leftTurn = false;
 	private Vector3 target;
+	[SerializeField] private bool onTheMove;
 
 	private Animator anim;
 	
@@ -135,25 +136,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
 	{
-		
-		if (!isFinish &&!isJumping && !isDead && !isMoving)
+		if (onTheMove)
 		{
-			Move(normalMove);
-		}
-		else if(isFinish || isDead)
-		{
-			
-			if (speed >= 0.1f)
+			if (!isFinish &&!isJumping && !isDead && !isMoving)
 			{
-				speed -= 1f;
 				Move(normalMove);
 			}
-			else
+			else if(isFinish || isDead)
 			{
-				normalMove = Vector2.zero;
+			
+				if (speed >= 0.1f)
+				{
+					speed -= 1f;
+					Move(normalMove);
+				}
+				else
+				{
+					normalMove = Vector2.zero;
+				}
 			}
-		}
 
+		}
+		
+		
 	}
 
 	
@@ -204,6 +209,11 @@ public class PlayerMovement : MonoBehaviour
 			isJumping = true;
 			CanvasController.Instance.UpdateYolometer(20f);
 			//Debug.Log("bumped");
+		}
+		
+		if (col.CompareTag("Star"))
+		{
+			player.TakeDamage();
 		}
 		
 		if (col.CompareTag("Crack"))

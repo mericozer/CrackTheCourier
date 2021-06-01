@@ -9,6 +9,8 @@ public class RollingWater : MonoBehaviour
     public float lifeTime;
 
     public int damage;
+    
+    private Vector2 move = new Vector2(-0.168f, -0.1f);
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,7 @@ public class RollingWater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.down * speed * Time.deltaTime);
+        transform.Translate(move * speed * Time.deltaTime);
     }
 
     void DestroyProjectile()
