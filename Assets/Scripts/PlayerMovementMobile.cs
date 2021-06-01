@@ -87,7 +87,7 @@ public class PlayerMovementMobile : MonoBehaviour
 			   
 			    
 			    anim.Play("RightTurn");
-			   StartCoroutine(RivalController.instance.DelayedRight());
+			    StartCoroutine(RivalController.instance.DelayedRight());
 			    
 			    
 			    toRight--;

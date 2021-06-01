@@ -66,7 +66,7 @@ public class CanvasController : MonoBehaviour
         currentYolo = maxYOLO;
         yoloMeter.maxValue = maxYOLO;
         yoloMeter.value = currentYolo;
-        
+
         ColorUtility.TryParseHtmlString("#CE1212", out red);
         ColorUtility.TryParseHtmlString("#184D47", out green);
         ColorUtility.TryParseHtmlString("#FDCA40", out yellow);
@@ -82,20 +82,20 @@ public class CanvasController : MonoBehaviour
             }
             else if (cooldownTimer > 0)
             {
-                Debug.Log("countdown");
+                //Debug.Log("countdown");
                 cooldownTimer -= Time.deltaTime;
             }
             else
             {
                 if (cooldownTimer <= 0)
                 {
-                    Debug.Log("countdown fin");
+                    //Debug.Log("countdown fin");
                     onWait = false;
                 }
 
                 if (isYolometerActive)
                 {
-                    Debug.Log("yolo work");
+                    //Debug.Log("yolo work");
                     UpdateYolometer(-0.1f);
                 }
                 //yolo += -0.1f;
@@ -114,19 +114,20 @@ public class CanvasController : MonoBehaviour
 
         YoloColorValueChecker();
         
-        Debug.Log("cdt is: " + cooldownTimer);
+        //Debug.Log("cdt is: " + cooldownTimer);
         if (yoloValue > 0)
         {
             if (!onWait)
             {
                 onWait = true;
                 cooldownTimer = 1.5f;
+                Debug.Log("IM HERE NOT ON WAIT");
             }
             else
             {
-                cooldownTimer += 0.3f;
+                cooldownTimer += 0.1f;
             }
-           
+
         }
 
         if (yoloMeter.value < 100f)
