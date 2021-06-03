@@ -7,6 +7,9 @@ public class ShurikenRoll : MonoBehaviour
     public float speed;
     public float lifeTime;
 
+    public float waitTime = 0f;
+    public float timer = 0f;
+
     public int damage;
     
     private Vector2 move = new Vector2(-0.168f, -0.1f);
@@ -20,7 +23,14 @@ public class ShurikenRoll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(move * speed * Time.deltaTime);
+        timer += Time.deltaTime;
+        if (timer >= waitTime)
+        {
+            
+             transform.Translate(move * speed * Time.deltaTime);
+             gameObject.transform.parent = null;
+        }
+        
     }
 
     void DestroyProjectile()
