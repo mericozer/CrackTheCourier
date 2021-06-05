@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class PlayerMovementMobile : MonoBehaviour
 {
+	public static PlayerMovementMobile instance;
+	
     private bool isJumping = false;
 	private bool isDead = false;
 	private bool isFinish = false;
 	
 	public int damage;
 
-	private int toLeft = 0;
-	private int toRight = 2;
+	private int toLeft = 0; //can turn left that many times
+	private int toRight = 2; //can turn right that many times
 	
 	private Vector2 moveAmount;
 	private Vector2 normalMove = new Vector2(0.1655f, 0.1f);
@@ -31,20 +33,35 @@ public class PlayerMovementMobile : MonoBehaviour
 	//mew movement tyrout
 	private Vector3 newPos;
 	private Vector3 startPos;
+	
 	private float journeyLength;
 	[SerializeField] private float speedNew = 10f;
 	private float startTime;
+	
 	private bool isMoving = false;
+	private bool onWait = false;
 	private bool rightTurn = false;
 	private bool leftTurn = false;
+	public bool rivalMove = false;
+	
 	private Vector3 target;
 
 	[SerializeField] private bool onTheMove;
 	
 	private Animator anim;
+
+	[SerializeField] private GameObject rival;
+	[SerializeField] private GameObject distancePoint;
+	[SerializeField] private Transform followPoint;
 	
 	public float speed;
 	private Rigidbody2D rb;
+
+	void Awake()
+	{
+		instance = this;
+	}
+	
 	void Start ()
 	{
 		//rb = GetComponent<Rigidbody2D>();
@@ -57,7 +74,7 @@ public class PlayerMovementMobile : MonoBehaviour
 	
     void Update ()
     {
-	    if (!isJumping && !isMoving)
+	    if (!isJumping && !isMoving && !onWait)
 	    {
 		    Vector2 moveInput;
 		    //Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -72,7 +89,11 @@ public class PlayerMovementMobile : MonoBehaviour
 			  
 			   
 			   anim.Play("LeftTurn");
-			   StartCoroutine(RivalController.instance.DelayedLeft());
+			   if (rivalMove)
+			   {
+				   StartCoroutine(RivalController.instance.DelayedLeft());
+			   }
+			   
 			   
 			    
 			    toLeft--;
@@ -87,7 +108,11 @@ public class PlayerMovementMobile : MonoBehaviour
 			   
 			    
 			    anim.Play("RightTurn");
-			    StartCoroutine(RivalController.instance.DelayedRight());
+			    if (rivalMove)
+			    {
+				    StartCoroutine(RivalController.instance.DelayedRight());
+			    }
+			  
 			    
 			    
 			    toRight--;
@@ -243,6 +268,26 @@ public class PlayerMovementMobile : MonoBehaviour
 			Destroy(col.gameObject);
 		}
 
+		if (col.CompareTag("RivalPoint"))
+		{
+			bool side;
+			onWait = true;
+			distancePoint.SetActive(true);
+			if (toRight > 0)
+			{
+				rival.transform.position = new Vector3(followPoint.position.x + 2f, followPoint.position.y + -1.5f, followPoint.position.z + 0);
+				side = true;
+			}
+			else
+			{
+				rival.transform.position = new Vector3(followPoint.position.x + -2f, followPoint.position.y + 1.5f, followPoint.position.z + 0);
+				side = false;
+			}
+			
+			StartCoroutine(RivalDelay(side));
+
+		}
+
 	}
 	
 	void OnTriggerExit2D(Collider2D other)
@@ -312,6 +357,16 @@ public class PlayerMovementMobile : MonoBehaviour
 		//rb.gravityScale = 1;
 		yield return null;
 
+	}
+
+	private IEnumerator RivalDelay(bool turnLeft)
+	{
+		yield return new WaitForSeconds(1f);
+		rival.SetActive(true);
+		rivalMove = true;
+		RivalController.instance.aheadLeft = turnLeft;
+		yield return new WaitForSeconds(2f);
+		onWait = false;
 	}
 
 	

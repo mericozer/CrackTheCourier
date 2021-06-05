@@ -31,7 +31,7 @@ public class CanvasController : MonoBehaviour
     private bool panelOpen = false;
     private bool shout = true;
     private bool onWait = false;
-    [SerializeField]  private bool isYolometerActive = true;
+    public bool isYolometerActive = true;
 
     private int yoloColorValue = 0;
         //Singleton

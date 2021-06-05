@@ -13,6 +13,9 @@ TagManager:
   - Damacana
   - TestBlock
   - Star
+  - Distance
+  - RivalPoint
+  - Rival
   layers:
   - Default
   - TransparentFX

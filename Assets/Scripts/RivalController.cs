@@ -7,17 +7,21 @@ public class RivalController : MonoBehaviour
     public static RivalController instance;
 
     private Animator anim;
+    [SerializeField] private Animator yolometerAnim;
     
     private bool isMoving;
     private bool rightTurn;
     private bool leftTurn;
     private bool normalShoot = true;
+    private bool goingAway = false;
+    public bool aheadLeft;
 
-    private float attackTime = 0f;
+    private float attackTime = -4f;
     private float attackDuration = 1f;
     private float fastAttackDuration = 0.2f;
     private float turnTime;
     private float turnTimeNormal = 0.5f;
+    [SerializeField] private float speed;
     [SerializeField] private float turnSpeed;
     [SerializeField] private float attackDurationMin;
     [SerializeField] private float attackDurationMax;
@@ -25,14 +29,20 @@ public class RivalController : MonoBehaviour
     [SerializeField] private float turnTimeFast;
 
     private int attackCounter = 0;
+    public  int attackLoopCount = 1;
+    private int currentLoop = 0;
+    
 
     private Vector2 normalMove = new Vector2(0.168f, 0.1f);
     
     private Vector3 target;
 
+    [SerializeField] private GameObject rivalPackage;
     [SerializeField] private GameObject star;
     [SerializeField] private GameObject shiningStar;
+    
     [SerializeField] private Transform shootPoint;
+    
 
     void Awake()
     {
@@ -44,6 +54,8 @@ public class RivalController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         turnTime = turnTimeNormal;
+        attackLoopCount = 1;
+        currentLoop = 0;
     }
 
     // Update is called once per frame
@@ -70,8 +82,35 @@ public class RivalController : MonoBehaviour
 				   
         }
 
-        if (normalShoot)
+        if (currentLoop < attackLoopCount)
         {
+           AttackPattern();
+        }
+        else
+        {
+            Debug.Log("current loop is: " + currentLoop);
+            Debug.Log("attack loop count is: " + attackLoopCount);
+            //wait
+            if (!goingAway)
+            {
+                goingAway = true;
+                yolometerAnim.SetBool("Up", false);
+                CanvasController.Instance.isYolometerActive = true;
+                CanvasController.Instance.UpdateYolometer(100);
+                PlayerMovementMobile.instance.rivalMove = false;
+                StartCoroutine(GoAway());
+            }
+           
+        }
+
+        
+        
+    }
+
+    void AttackPattern()
+    {
+         if (normalShoot)
+         {
             if (!isMoving)
             {
                 attackTime += Time.deltaTime;
@@ -99,9 +138,9 @@ public class RivalController : MonoBehaviour
                 }
                 //if attack counter is more than ADD and attacktime adding wait
             }
-        }
-        else
-        {
+         }
+         else
+         {
             if (attackCounter > 1)
             {
                 attackTime += Time.deltaTime;
@@ -144,20 +183,52 @@ public class RivalController : MonoBehaviour
             {
                 normalShoot = true;
                 attackCounter = 0;
+                currentLoop++;
                 attackTime = -1f;
                 turnTime = turnTimeNormal;
             }
             //attack counter pass ADD
-        }
-        
+         }
+    }
+    void FixedUpdate()
+    {
+        Move(normalMove);
     }
     
+    
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Distance"))
+        {
+            col.gameObject.SetActive(false);
+            
+            speed = speed / 2;
+            
+            Debug.Log("left turn is : " + aheadLeft);
+            if (aheadLeft)
+            {
+                TurnLeft();
+                
+            }
+            else
+            {
+                TurnRight();
+            }
+
+        }
+    }
+
+    void OnEnable()
+    {
+       yolometerAnim.SetBool("Up", true);
+       CanvasController.Instance.isYolometerActive = false;
+    }
     public void TurnLeft()
     {
         //anim.Play("TurnLeft");
         target = new Vector3(transform.position.x + -2f, transform.position.y + 1.5f, transform.position.z + 0);
         //NEED WHEN IT GOES FORWARD
-        //target += ForwardMag(normalMove);
+        target += ForwardMag(normalMove);
         isMoving = true;
         leftTurn = true;
     }
@@ -165,9 +236,10 @@ public class RivalController : MonoBehaviour
     public void TurnRight()
     {
         //anim.Play("TurnRight");
+        Debug.Log("it worked");
         target = new Vector3(transform.position.x + 2f, transform.position.y + -1.5f, transform.position.z + 0);
         //NEED WHEN IT GOES FORWARD
-        //target += ForwardMag(normalMove);
+        target += ForwardMag(normalMove);
         isMoving = true;
         rightTurn = true;
 	    
@@ -189,5 +261,36 @@ public class RivalController : MonoBehaviour
     {
         yield return new WaitForSeconds(fastAttackPrepTime);
         attackCounter++;
+    }
+
+    private IEnumerator GoAway()
+    {
+        
+        speed = speed * 2;
+
+        yield return new WaitForSeconds(2f);
+        
+        rivalPackage.SetActive(false);
+    }
+    
+    private void Move(Vector2 moveVec)
+    {
+        //Vector2 currentPos = transform.position;
+        Vector2 inputVector = moveVec;
+        inputVector = Vector2.ClampMagnitude(inputVector, 1);
+        Vector2 movement = inputVector * speed;
+        //Vector2 newPos = currentPos + movement * Time.deltaTime;	
+		
+        //Debug.Log(newPos);
+        transform.Translate(movement * Time.fixedDeltaTime, Space.World);
+    }
+    
+    private Vector3 ForwardMag(Vector2 moveVec)
+    {
+        Vector2 inputVector = moveVec;
+        inputVector = Vector2.ClampMagnitude(inputVector, 1);
+        Vector2 movement = inputVector * 10f;
+
+        return movement;
     }
 }
