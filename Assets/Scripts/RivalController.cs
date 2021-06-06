@@ -16,7 +16,7 @@ public class RivalController : MonoBehaviour
     private bool goingAway = false;
     public bool aheadLeft;
 
-    private float attackTime = -4f;
+    private float attackTime = -1.5f;
     private float attackDuration = 1f;
     private float fastAttackDuration = 0.2f;
     private float turnTime;
@@ -31,10 +31,10 @@ public class RivalController : MonoBehaviour
     private int attackCounter = 0;
     public  int attackLoopCount = 1;
     private int currentLoop = 0;
-    
+    private int tempCounter = 1;
 
     private Vector2 normalMove = new Vector2(0.168f, 0.1f);
-    
+     
     private Vector3 target;
 
     [SerializeField] private GameObject rivalPackage;
@@ -152,7 +152,7 @@ public class RivalController : MonoBehaviour
                     //ATTACK
                     GameObject temp = Instantiate(shiningStar, shootPoint.position, transform.rotation);
                     temp.transform.parent = transform;
-                    temp.GetComponent<ShurikenRoll>().waitTime = 0.1f;
+                    temp.GetComponent<ShurikenRoll>().waitTime = 0.2f;
                     Debug.Log("RIVAL ATTACKS");
 
                     attackCounter++;
@@ -179,7 +179,7 @@ public class RivalController : MonoBehaviour
                 
             }
 
-            if (attackCounter == 11)
+            if (attackCounter == 10)
             {
                 normalShoot = true;
                 attackCounter = 0;
@@ -192,7 +192,11 @@ public class RivalController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Move(normalMove);
+        if (!isMoving)
+        {
+            Move(normalMove);
+        }
+        
     }
     
     
@@ -226,9 +230,23 @@ public class RivalController : MonoBehaviour
     public void TurnLeft()
     {
         //anim.Play("TurnLeft");
-        target = new Vector3(transform.position.x + -2f, transform.position.y + 1.5f, transform.position.z + 0);
+        if (tempCounter < 4)
+        {
+            target = new Vector3(transform.position.x + 0, transform.position.y + 3f, transform.position.z + 0);
+            tempCounter++;
+        }
+        else
+        {
+            target = new Vector3(transform.position.x + 0, transform.position.y + 2.9f, transform.position.z + 0);
+            tempCounter++;
+            if (tempCounter < 8)
+            {
+                tempCounter = 0;
+            }
+		    
+        }
         //NEED WHEN IT GOES FORWARD
-        target += ForwardMag(normalMove);
+        //target += ForwardMag(normalMove);
         isMoving = true;
         leftTurn = true;
     }
@@ -237,9 +255,9 @@ public class RivalController : MonoBehaviour
     {
         //anim.Play("TurnRight");
         Debug.Log("it worked");
-        target = new Vector3(transform.position.x + 2f, transform.position.y + -1.5f, transform.position.z + 0);
+        target = new Vector3(transform.position.x + 5f, transform.position.y + 0, transform.position.z + 0);
         //NEED WHEN IT GOES FORWARD
-        target += ForwardMag(normalMove);
+        //target += ForwardMag(normalMove);
         isMoving = true;
         rightTurn = true;
 	    

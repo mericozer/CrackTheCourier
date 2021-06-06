@@ -43,6 +43,8 @@ public class PlayerMovementMobile : MonoBehaviour
 	private bool rightTurn = false;
 	private bool leftTurn = false;
 	public bool rivalMove = false;
+
+	private int tempCounter = 0;
 	
 	private Vector3 target;
 
@@ -148,11 +150,26 @@ public class PlayerMovementMobile : MonoBehaviour
 
     private void TurnLeft()
     {
-	    target = new Vector3(transform.position.x + -2f, transform.position.y + 1.5f, transform.position.z + 0);
+	    if (tempCounter < 4)
+	    {
+		    target = new Vector3(transform.position.x + 0, transform.position.y + 3f, transform.position.z + 0);
+		    tempCounter++;
+	    }
+	    else
+	    {
+		    target = new Vector3(transform.position.x + 0, transform.position.y + 2.9f, transform.position.z + 0);
+		    tempCounter++;
+		    if (tempCounter < 8)
+		    {
+			    tempCounter = 0;
+		    }
+		    
+	    }
+	    
 
 	    if (onTheMove)
 	    {
-		    target += ForwardMag(normalMove);
+		    //target += ForwardMag(normalMove);
 	    }
 	    
 	    isMoving = true;
@@ -161,11 +178,11 @@ public class PlayerMovementMobile : MonoBehaviour
     
     private void TurnRight()
     {
-	    target = new Vector3(transform.position.x + 2f, transform.position.y + -1.5f, transform.position.z + 0);
+	    target = new Vector3(transform.position.x + 5f, transform.position.y + 0f, transform.position.z + 0);
 	    
 	    if (onTheMove)
 	    {
-		    target += ForwardMag(normalMove);
+		   // target += ForwardMag(normalMove);
 	    }
 	   
 	    isMoving = true;
@@ -275,12 +292,12 @@ public class PlayerMovementMobile : MonoBehaviour
 			distancePoint.SetActive(true);
 			if (toRight > 0)
 			{
-				rival.transform.position = new Vector3(followPoint.position.x + 2f, followPoint.position.y + -1.5f, followPoint.position.z + 0);
+				rival.transform.position = new Vector3(followPoint.position.x + 5f, followPoint.position.y + 0, followPoint.position.z + 0);
 				side = true;
 			}
 			else
 			{
-				rival.transform.position = new Vector3(followPoint.position.x + -2f, followPoint.position.y + 1.5f, followPoint.position.z + 0);
+				rival.transform.position = new Vector3(followPoint.position.x + 0, followPoint.position.y + 3f, followPoint.position.z + 0);
 				side = false;
 			}
 			
@@ -330,7 +347,7 @@ public class PlayerMovementMobile : MonoBehaviour
 		float maxHeight = originalHeight + 5f;
 
 		Vector3 test = new Vector2(1f, 1.3f);
-		Vector3 test2 = new Vector2(-0.8f, 0.8f);
+		Vector3 test2 = new Vector2(-0.7f, 0.8f);
 		//rb.gravityScale = 0;
 		//player.GetComponent<Player>().TakeDamage(damage);
 
@@ -361,7 +378,7 @@ public class PlayerMovementMobile : MonoBehaviour
 
 	private IEnumerator RivalDelay(bool turnLeft)
 	{
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(1.4f);
 		rival.SetActive(true);
 		rivalMove = true;
 		RivalController.instance.aheadLeft = turnLeft;
