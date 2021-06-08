@@ -53,6 +53,7 @@ public class AudioManager : MonoBehaviour
 
     public void Switch(string currentAudio, string nextAudio)
     {
+        
         Sound s = Array.Find(sounds, sound => sound.name == currentAudio);
         s.source.Stop();
 
@@ -64,5 +65,37 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == audioName);
         s.source.Stop();
+    }
+
+    public void GameOver()
+    {
+        Stop("Drive");
+        Stop("CrackMain");
+        Stop("Boss");
+    }
+
+    public IEnumerator FadeTrack(string currentAudio, string nextAudio, float volume)
+    {
+        float fadeInTime = 4f;
+        float fadeOutTime = 1.5f;
+        float timeElapsed = 0f;
+
+        Sound currentSound = Array.Find(sounds, sound => sound.name == currentAudio);
+        Sound nextSound = Array.Find(sounds, sound => sound.name == nextAudio);
+        nextSound.source.volume = 0;
+        nextSound.source.Play();
+        
+        while (timeElapsed < fadeInTime)
+        {
+            currentSound.source.volume = Mathf.Lerp(1, 0, timeElapsed / fadeOutTime);
+            nextSound.source.volume = Mathf.Lerp(0, volume, timeElapsed / fadeInTime);
+            
+            timeElapsed += Time.deltaTime;
+
+            yield return null;
+        }
+        
+        currentSound.source.Stop();
+        
     }
 }

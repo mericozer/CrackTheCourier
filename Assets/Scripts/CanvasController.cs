@@ -21,7 +21,7 @@ public class CanvasController : MonoBehaviour
     private Color yellow;
     private Color green;
     
-    private float loseYoloTime = 2f;
+    private float loseYoloTime = 1f;
     private float cooldownTimer = 0f;
     private float shoutTimer = 2f;
     private float maxYOLO = 100f;
@@ -80,23 +80,23 @@ public class CanvasController : MonoBehaviour
             {
                 loseYoloTime -= Time.deltaTime;
             }
-            else if (cooldownTimer > 0)
+            else if (cooldownTimer >= 0)
             {
-                //Debug.Log("countdown");
                 cooldownTimer -= Time.deltaTime;
+                Debug.Log("DECREASE: " + cooldownTimer);
             }
             else
             {
-                if (cooldownTimer <= 0)
+               /* if (cooldownTimer <= 0 && onWait)
                 {
                     //Debug.Log("countdown fin");
                     onWait = false;
-                }
+                }*/
 
                 if (isYolometerActive)
                 {
                     //Debug.Log("yolo work");
-                    UpdateYolometer(-0.1f);
+                    UpdateYolometer(-0.2f);
                 }
                 //yolo += -0.1f;
                 //yoloMeter.value = yolo;
@@ -117,7 +117,7 @@ public class CanvasController : MonoBehaviour
         //Debug.Log("cdt is: " + cooldownTimer);
         if (yoloValue > 0)
         {
-            if (!onWait)
+           /* if (!onWait)
             {
                 onWait = true;
                 cooldownTimer = 1.5f;
@@ -126,27 +126,25 @@ public class CanvasController : MonoBehaviour
             else
             {
                 cooldownTimer += 0.1f;
-            }
-
+            }*/
+           cooldownTimer += 0.3f;
+           Debug.Log("WHAT COOLDOWN TIME IS: " + cooldownTimer);
         }
 
         if (yoloMeter.value < 100f)
         {
             shout = true;
-            shoutTimer = 3f;
+            shoutTimer = 2f;
         }
 
         if (yoloMeter.value.Equals(100f))
         {
-            
             //shoutTimer += Time.deltaTime;
             if (!YoloShout.activeSelf && shout)
             {
                 shout = false;
                 YoloShout.SetActive(true);
             }
-            
-            
         }
 
         if (currentYolo <= 0)
@@ -154,6 +152,7 @@ public class CanvasController : MonoBehaviour
             ShowPanels("Low Yolo");
             filler.SetActive(false);
             AudioManager.Instance.Stop("Alert");
+            AudioManager.Instance.GameOver();
         }
         
     }

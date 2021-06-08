@@ -224,6 +224,7 @@ public class PlayerMovementMobile : MonoBehaviour
 	    {
 		    CanvasController.Instance.ShowPanels("Lose");
 		    isDead = true;
+		   
 		    //collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
 		    smoke.SetActive(true);
 	    }
@@ -244,7 +245,8 @@ public class PlayerMovementMobile : MonoBehaviour
 		    smoke.SetActive(true);
 	    }
 	    
-	    AudioManager.Instance.Stop("Drive");
+	    AudioManager.Instance.Play("Crash");
+	    AudioManager.Instance.GameOver();
     }
 	
 	void OnTriggerEnter2D(Collider2D col)
@@ -289,6 +291,8 @@ public class PlayerMovementMobile : MonoBehaviour
 		{
 			bool side;
 			onWait = true;
+			StartCoroutine(AudioManager.Instance.FadeTrack("CrackMain", "Boss", 0.7f));
+			//AudioManager.Instance.Switch("CrackMain", "Boss");
 			distancePoint.SetActive(true);
 			if (toRight > 0)
 			{

@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
             CanvasController.Instance.ShowPanels("Lose");
+            AudioManager.Instance.GameOver();
         }
     }
     

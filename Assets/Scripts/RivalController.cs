@@ -94,6 +94,7 @@ public class RivalController : MonoBehaviour
             if (!goingAway)
             {
                 goingAway = true;
+                StartCoroutine(AudioManager.Instance.FadeTrack("Boss", "CrackMain", 2.5f));
                 yolometerAnim.SetBool("Up", false);
                 CanvasController.Instance.isYolometerActive = true;
                 CanvasController.Instance.UpdateYolometer(100);
@@ -229,7 +230,7 @@ public class RivalController : MonoBehaviour
     }
     public void TurnLeft()
     {
-        //anim.Play("TurnLeft");
+        //anim.Play("TurnLeftRival");
         if (tempCounter < 4)
         {
             target = new Vector3(transform.position.x + 0, transform.position.y + 3f, transform.position.z + 0);
@@ -253,7 +254,7 @@ public class RivalController : MonoBehaviour
     
     public void TurnRight()
     {
-        //anim.Play("TurnRight");
+        //anim.Play("TurnRightRival");
         Debug.Log("it worked");
         target = new Vector3(transform.position.x + 5f, transform.position.y + 0, transform.position.z + 0);
         //NEED WHEN IT GOES FORWARD
@@ -266,11 +267,13 @@ public class RivalController : MonoBehaviour
     
     public IEnumerator DelayedLeft()
     {
+        anim.Play("TurnLeftRival");
         yield return new WaitForSeconds(turnTime);
         TurnLeft();
     }
     public IEnumerator DelayedRight()
     {
+        anim.Play("TurnRightRival");
         yield return new WaitForSeconds(turnTime);
         TurnRight();
     }
@@ -311,4 +314,6 @@ public class RivalController : MonoBehaviour
 
         return movement;
     }
+
+   
 }
