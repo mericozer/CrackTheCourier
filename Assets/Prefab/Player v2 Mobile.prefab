@@ -581,7 +581,7 @@ MonoBehaviour:
   fullBottle: {fileID: 21300000, guid: 9a8cdc306bf9a4d4ba86a3d8bec432f5, type: 3}
   emptyBottle: {fileID: 21300000, guid: 8a48cc13d5ea84046aa6c3f379029305, type: 3}
   projectile: {fileID: 5899844919040931515, guid: c93580f301c951e4e99c0be291af1022, type: 3}
-  shotPoint: {fileID: 0}
+  shotPoint: {fileID: 7837945023940680612}
   bottleSprites:
   - {fileID: 294177762115277239}
   - {fileID: 294177762802143453}
@@ -651,6 +651,7 @@ MonoBehaviour:
   timerRoad: 2
   firstRoad: 1
   speedNew: 20
+  rivalMove: 0
   onTheMove: 1
   rival: {fileID: 0}
   distancePoint: {fileID: 1669109654368437035}
@@ -1533,7 +1534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294177762960755580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.3, y: -38.8, z: 0}
+  m_LocalPosition: {x: 46.9, y: -31.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 294177761651660123}
@@ -1892,7 +1893,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669109654368437035}
   m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
-  m_LocalPosition: {x: 52.51, y: -29.83, z: 0}
+  m_LocalPosition: {x: 56.1, y: -28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 294177761651660123}
@@ -2112,7 +2113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6404104110448885867}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.8, y: -41.6, z: 0}
+  m_LocalPosition: {x: 28.27, y: -40.8, z: 39.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 294177761651660123}

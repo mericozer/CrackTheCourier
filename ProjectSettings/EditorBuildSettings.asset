@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: de9463d0cf1f70e4ab658f08a2675715
   - enabled: 1
-    path: Assets/Scenes/Mobile Landscape.unity
-    guid: f6d632a416c0ddc4ba0f5c50d2d620ff
+    path: Assets/Scenes/SUNUMMM.unity
+    guid: 59f53c6fa8603a74a84f4866d3b0df15
   m_configObjects: {}

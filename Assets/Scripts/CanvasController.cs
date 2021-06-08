@@ -83,7 +83,7 @@ public class CanvasController : MonoBehaviour
             else if (cooldownTimer >= 0)
             {
                 cooldownTimer -= Time.deltaTime;
-                Debug.Log("DECREASE: " + cooldownTimer);
+                //Debug.Log("DECREASE: " + cooldownTimer);
             }
             else
             {
@@ -128,7 +128,7 @@ public class CanvasController : MonoBehaviour
                 cooldownTimer += 0.1f;
             }*/
            cooldownTimer += 0.3f;
-           Debug.Log("WHAT COOLDOWN TIME IS: " + cooldownTimer);
+           //Debug.Log("WHAT COOLDOWN TIME IS: " + cooldownTimer);
         }
 
         if (yoloMeter.value < 100f)

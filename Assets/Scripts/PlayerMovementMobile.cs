@@ -255,7 +255,9 @@ public class PlayerMovementMobile : MonoBehaviour
 		{
 			isFinish = true;
 			CanvasController.Instance.IsGameRunning = false;
+			CanvasController.Instance.isYolometerActive = false;
 			CanvasController.Instance.ShowPanels("Win");
+			AudioManager.Instance.Stop("Drive");
 		}
 		
 		if (col.CompareTag("Bump"))
@@ -315,7 +317,7 @@ public class PlayerMovementMobile : MonoBehaviour
 	{
 		if (other.CompareTag("Close Call"))
 		{
-			CanvasController.Instance.UpdateYolometer(20f);
+			CanvasController.Instance.UpdateYolometer(30f);
 			if (!isDead)
 			{
 				AudioManager.Instance.Play("Honk");
