@@ -94,7 +94,7 @@ public class RivalController : MonoBehaviour
             if (!goingAway)
             {
                 goingAway = true;
-                StartCoroutine(AudioManager.Instance.FadeTrack("Boss", "CrackMain", 2.5f));
+                StartCoroutine(AudioManager.Instance.FadeTrack("Boss", "CrackMain", 0.7f));
                 yolometerAnim.SetBool("Up", false);
                 CanvasController.Instance.isYolometerActive = true;
                 CanvasController.Instance.UpdateYolometer(100);

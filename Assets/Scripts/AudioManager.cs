@@ -30,7 +30,17 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         //background music
+        //new sound will be added
         Play("CrackMain");
+        if (inGame)
+        {
+            AdjustSound("CrackMain", 0.5f);
+        }
+        else
+        {
+            AdjustSound("CrackMain", 0.8f);
+        }
+        
         
         if(inGame)
         {Play("Drive");}
@@ -67,6 +77,11 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
+    public void AdjustSound(string audioName,float volume)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == audioName);
+        s.source.volume = volume;
+    }
     public void GameOver()
     {
         Stop("Drive");
@@ -76,7 +91,7 @@ public class AudioManager : MonoBehaviour
 
     public IEnumerator FadeTrack(string currentAudio, string nextAudio, float volume)
     {
-        float fadeInTime = 4f;
+        float fadeInTime = 1.7f;
         float fadeOutTime = 1.5f;
         float timeElapsed = 0f;
 
@@ -87,7 +102,7 @@ public class AudioManager : MonoBehaviour
         
         while (timeElapsed < fadeInTime)
         {
-            currentSound.source.volume = Mathf.Lerp(1, 0, timeElapsed / fadeOutTime);
+            currentSound.source.volume = Mathf.Lerp(currentSound.source.volume, 0, timeElapsed / fadeOutTime);
             nextSound.source.volume = Mathf.Lerp(0, volume, timeElapsed / fadeInTime);
             
             timeElapsed += Time.deltaTime;

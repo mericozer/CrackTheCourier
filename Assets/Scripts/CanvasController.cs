@@ -59,6 +59,8 @@ public class CanvasController : MonoBehaviour
         {
             _instance = this;
         }
+
+        Time.timeScale = 1;
     }
     // Start is called before the first frame update
     void Start()
@@ -213,6 +215,7 @@ public class CanvasController : MonoBehaviour
 
     public void ShowPanels(string panelName)
     {
+        Time.timeScale = 0;
         switch (panelName)
         {
             case "Win":
