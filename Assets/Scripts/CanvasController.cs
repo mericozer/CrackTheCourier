@@ -98,7 +98,7 @@ public class CanvasController : MonoBehaviour
                 if (isYolometerActive)
                 {
                     //Debug.Log("yolo work");
-                    UpdateYolometer(-0.2f);
+                    UpdateYolometer(-7f * Time.deltaTime);
                 }
                 //yolo += -0.1f;
                 //yoloMeter.value = yolo;
