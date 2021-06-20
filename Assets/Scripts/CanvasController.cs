@@ -215,7 +215,7 @@ public class CanvasController : MonoBehaviour
 
     public void ShowPanels(string panelName)
     {
-        Time.timeScale = 0;
+        float delay = 2f;
         switch (panelName)
         {
             case "Win":
@@ -223,6 +223,7 @@ public class CanvasController : MonoBehaviour
                 {
                     winPanel.SetActive(true);
                     panelOpen = true;
+                    delay = 5f;
                 }
                 
                 break;
@@ -232,6 +233,7 @@ public class CanvasController : MonoBehaviour
                 {
                     losePanel.SetActive(true);
                     panelOpen = true;
+                    delay = 2f;
                 }
                 
                 break;
@@ -241,13 +243,21 @@ public class CanvasController : MonoBehaviour
                 {
                     lowYoloPanel.SetActive(true);
                     panelOpen = true;
+                    delay = 2f;
                 }
                
                 break;
         }
-        
-    }
-    
 
+        StartCoroutine(GameOverDelay(delay));
+
+    }
+
+
+    IEnumerator GameOverDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Time.timeScale = 0f;
+    }
 
 }

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     
     public void Awake()
     {
+        Time.timeScale = 1f;
         //Checks if there are any Canvas controller in the scene because of the singleton pattern
         if (_instance != null && _instance != this)
         {
